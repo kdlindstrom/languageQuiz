@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Programming Language Quiz</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="js/jquery-3.4.1.js"
-    <script src="js/scripts.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Programming Language Aptitude Quiz</h1>
-      <form id="languageQuiz">
-        <div class="radio">
-          <label>
-            <input type="radio" name="developerType" value="java" checked>
-            Android Apps
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="developerType" value="python" checked>
-            GUIs
-          </label>
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/jquery-3.4.1.js"></script>
+  <script src="js/scripts.js"></script>
+
+  <meta charset="utf-8">
+  <title>Programming Language Quiz</title>
+</head>
+<body>
+  <div class="container">
+    <div id="survey">
+      <form>
+        <div class="form-group">
+          <label for="question1">What do you want to make?</label>
+          <select class="form-control" id="devType">
+            <option>GUIs</option>
+            <option>Android apps</option>
+            <option>iOS apps</option>
+          </select>
         </div>
 
-
-
+        <button type="submit" class="btn">submit</button>
       </form>
+      <div id="output">
+
+      </div>
     </div>
-  </body>
+  </div>
+</body>
 </html>
