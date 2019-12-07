@@ -1,14 +1,20 @@
 $(document).ready(function(){
 
-
   $("#survey form").submit(function(event){
   event.preventDefault();
+
   var devType = $("#devType").val();
   var foodType = $("#foodType").val();
   var artistType = $("#artistType").val();
+  var dryerWasher =$("#dryerWasher").val();
+  var favNumber=$("#favNumber").val();
+
   var javaScore=0;
   var pythonScore=0;
   var swiftScore=0;
+
+
+
     if (devType === 'Android apps') {
       javaScore +=2;
     }else if (devType ==='GUIs'){
@@ -22,7 +28,7 @@ $(document).ready(function(){
     }else if (foodType ==='pizza'){
       pythonScore +=3;
     }else if (foodType ==='pizza burritos'){
-      alert("I don't think that's a real food, and if it is it probably shouldn't be.");
+      alert("I don't think pizza burritos are a real food, and if it is it probably shouldn't be.");
     }
 
     if (artistType === 'Ja Rule') {
@@ -36,7 +42,7 @@ $(document).ready(function(){
     if (dryerWasher === 'dryer'){
       javaScore +=1;
     }else if (dryerWasher ==='washer'){
-      alert("...Are you serious? That sounds terrible.")
+      alert("...Are you serious? Trying to put on wet clothes sounds terrible.")
     }
 
     if (favNumber === '7'){
@@ -61,8 +67,7 @@ $(document).ready(function(){
       $("#output").text("You are equally suited to java, python, and swift."));
 
 
-    $( 'survey form' ).each(function(){
-    this.reset();
+
 });
   });
 });
