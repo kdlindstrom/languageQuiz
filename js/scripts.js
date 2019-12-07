@@ -5,21 +5,22 @@ $(document).ready(function(){
   event.preventDefault();
   var devType = $("#devType").val();
   var foodType = $("#foodType").val();
+  var artistType = $("#artistType").val();
   var javaScore=0;
   var pythonScore=0;
   var swiftScore=0;
     if (devType === 'Android apps') {
-      javaScore +=1;
-    }else if (devType==='GUIs'){
-      pythonScore +=1;
+      javaScore +=2;
+    }else if (devType ==='GUIs'){
+      pythonScore +=3;
     }else if (devType ==='iOS apps'){
       swiftScore +=1;
     }
 
     if (foodType === 'burritos') {
-      javaScore +=1;
-    }else if (foodType==='pizza'){
-      pythonScore +=1;
+      javaScore +=5;
+    }else if (foodType ==='pizza'){
+      pythonScore +=3;
     }else if (foodType ==='pizza burritos'){
       alert("I don't think that's a real food, and if it is it probably shouldn't be.");
     }
@@ -29,7 +30,21 @@ $(document).ready(function(){
     }else if (artistType==='Whitesnake'){
       pythonScore +=1;
     }else if (artistType ==='Taylor Swift'){
-        swiftScore +=1;
+        swiftScore +=7;
+    }
+
+    if (dryerWasher === 'dryer'){
+      javaScore +=1;
+    }else if (dryerWasher ==='washer'){
+      alert("...Are you serious? That sounds terrible.")
+    }
+
+    if (favNumber === '7'){
+      pythonScore =+3;
+    }else if (favNumber === '13'){
+      swiftScore =+ 2;
+    }else if (favNumber === '22'){
+      javaScore =+ 2;
     }
     console.log("java" +javaScore);
     console.log("python"+pythonScore);
@@ -43,8 +58,11 @@ $(document).ready(function(){
     }else if(swiftScore>javaScore && swiftScore>pythonScore){
         $("#output").text("You should learn swift.");
     }else(
-        alert("please complete the form")
-    );
+      $("#output").text("You are equally suited to java, python, and swift."));
 
+
+    $( 'survey form' ).each(function(){
+    this.reset();
+});
   });
 });
