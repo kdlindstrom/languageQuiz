@@ -52,6 +52,7 @@ $(document).ready(function(){
     }else if (favNumber === '22'){
       javaScore =+ 2;
     }
+    
     console.log("java" +javaScore);
     console.log("python"+pythonScore);
     console.log("swift"+swiftScore);

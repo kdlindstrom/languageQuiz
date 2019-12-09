@@ -1,5 +1,12 @@
 #output {
-  background-color: green;
-  color: white;
-  border-color: lightgreen;
+  color: green;
+}
+.form-control {
+  width:50%;
+}
+.btn-success{
+  margin-left: 20%;
+}
+body {
+  background-color: lightgray;
 }
