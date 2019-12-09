@@ -63,11 +63,21 @@ $(document).ready(function(){
         $("#output").text("You should learn python.");
     }else if(swiftScore>javaScore && swiftScore>pythonScore){
         $("#output").text("You should learn swift.");
-    }else(
-      $("#output").text("You are equally suited to java, python, and swift."));
+    }else if(javaScore===swiftScore && javaScore===pythonScore){
+          $("#output").text("You are equally suited to learning java, python and swift.")
+    }else if(javaScore===swiftScore){
+        $("#output").text("You are equally suited to learning java and swift.")
+    }else if(javaScore===pythonScore){
+        $("#output").text("You are equally suited to learning java and python.")
+    }else if(pythonScore===swiftScore){
+        $("#output").text("You are equally suited to learning python and swift.")
+
+    }
+
+
+
 
 
 
 });
   });
-});
